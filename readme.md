@@ -7,14 +7,13 @@ This repository contains code for training and deploying a deep learning model f
 - Multi-GPU training using TensorFlow's `MirroredStrategy`.
 - Pre-trained EfficientNetB7 as the base model.
 - Checkpointing to save the best-performing model.
-- TensorFlow SavedModel for easy inference.
 
 ## Directory Structure
 
-- `training/`: Code and utilities for training the model.
-- `inference/`: Scripts for deploying the trained model.
-- `saved_model/`: Directory containing the exported TensorFlow SavedModel.
-- `checkpoints/`: Directory to save training checkpoints.
+- `training.ipynb`: Code for training the model.
+- `pre-processing.ipynb`: Dataset preprocessing utilities.
+- `app.py`: script for deploying the trained model.
+- `checkpoints`: Directory to save training checkpoints.
 
 ## Setup
 
@@ -35,7 +34,4 @@ This repository contains code for training and deploying a deep learning model f
 
 ## Training
 
-To train the model, use the script in `training/train.py`. The dataset should be stored in the specified TFRecord format.
-
-```bash
-python training/train.py
+To train the model, use the script in `train.ipynb`. The dataset should be stored in the specified TFRecord format.
