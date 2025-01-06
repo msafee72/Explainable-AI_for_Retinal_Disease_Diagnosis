@@ -36,11 +36,11 @@ The frontend for the project is developed using React. The application provides 
 5. **Diagnostics Results Screen**  
    <img src="xai-front-end-prototype/screenshots/Diagnostics-Results.jpeg" width="500" height="300">
 
-## Prototype-XAI for Retinal Disease Diagnosis
+## Design Prototype XAI for Retinal Disease Diagnosis
 
 A detailed prototype for the "Explainable AI for Retinal Disease Diagnosis" project has been designed and can be accessed on Visily. The interface showcases the user journey, including image uploads, results display, and explainable AI features.
 
-[Prototype-XAI](https://app.visily.ai/projects/ef8f771b-a013-4d28-b5e5-a95c882af6e4/boards/1493524)
+[Design Prototype XAI](https://app.visily.ai/projects/ef8f771b-a013-4d28-b5e5-a95c882af6e4/boards/1493524)
 
 
 ## Setup
