@@ -56,3 +56,10 @@ The frontend for the project is developed using React. The application provides 
 ## Training
 
 To train the model, use the script in `training.ipynb`. The dataset should be stored in the specified TFRecord format.
+
+## Group Members
+
+- **Muhammad Safee** (BSEF21M057)
+- **Muhammad Muaz Saleem** (BSEF21M036)
+- **Muhammad Usman** (BSEF21M046)
+- **Muhammad Naseem** (BSEF21M058)
