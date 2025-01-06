@@ -22,19 +22,19 @@ The frontend for the project is developed using React. The application provides 
 ### Screenshots of the Frontend:
 
 1. **Main Home Page**  
-   ![Main Home](xai-front-end-prototype/screenshots/Main-Home.jpeg)
+   <img src="xai-front-end-prototype/screenshots/Main-Home.jpeg" width="500" height="300">
 
 2. **Features Home Page**  
-   ![Features Home](xai-front-end-prototype/screenshots/Features-Home.jpeg)
+   <img src="xai-front-end-prototype/screenshots/Features-Home.jpeg" width="500" height="300">
 
 3. **Upload Image Screen**  
-   ![Upload Image](xai-front-end-prototype/screenshots/Upload-Image.jpeg)
+   <img src="xai-front-end-prototype/screenshots/Upload-Image.jpeg" width="500" height="300">
 
 4. **Grad-CAM Results Display**  
-   ![Grad-CAM Results](xai-front-end-prototype/screenshots/GradCam-Results.jpeg)
+   <img src="xai-front-end-prototype/screenshots/GradCam-Results.jpeg" width="500" height="300">
 
 5. **Diagnostics Results Screen**  
-   ![Diagnostics Results](xai-front-end-prototype/screenshots/Diagnostics-Results.jpeg)
+   <img src="xai-front-end-prototype/screenshots/Diagnostics-Results.jpeg" width="500" height="300">
 
 ## Setup
 
