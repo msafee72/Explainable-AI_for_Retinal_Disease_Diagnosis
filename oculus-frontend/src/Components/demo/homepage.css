@@ -1,0 +1,26 @@
+.light-burst {
+    animation: lightBurst 2s ease-in-out forwards;
+  }
+  
+  @keyframes lightBurst {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .grok-fade {
+    animation: grokFade 2s ease-in-out 0.5s forwards;
+    opacity: 0;
+  }
+  
+  @keyframes grokFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-bounce {
+    animation: bounce 0.6s infinite;
+  }
+  html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+    font-family: 'Poppins', sans-serif; /* Set default font */
+  }
+
+  body {
+    @apply bg-softGray text-darkGray bg-black; /* Use Tailwind colors */
+
+  }
+
+  /* Add this to your CSS file */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #333 #0a0a0a;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 6px;
+}
+
+/* Ensure the animations work properly in different browsers */
+@media (prefers-reduced-motion: no-preference) {
+  .flex[style*="animation"] {
+    will-change: transform;
+  }
+}
+}
+
+@layer components {
+  .login-buttons {
+    @apply rounded-full hover:bg-customBlue hover:cursor-pointer hover:text-white text-xs font-poppin transition-all ease-in;
+  }
+
+  .custome-link {
+    @apply  inline-block px-5 py-1 hover:bg-slate-200 hover:text-black hover:rounded-full transition-all duration-300 ease-in-out;
+  }
+
+  .active-class {
+    @apply text-black bg-slate-100 rounded-full ;
+  }
+
+  .button {
+    @apply px-5 py-2 border rounded-sm ring-1 font-sans mt-2 hover:bg-customBlue transition-all duration-100 ease-in;
+  }
+
+  /* Gradient utility class */
+  .gradient-bg {
+    @apply bg-gradient-to-r from-gradientStart to-gradientEnd;
+  }
+}
