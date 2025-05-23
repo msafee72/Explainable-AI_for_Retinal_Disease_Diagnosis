@@ -1,72 +1,134 @@
 # Explainable AI for Retinal Disease Diagnosis
 
-This repository contains code for training and deploying a deep learning model for retinal disease diagnosis using OCT images. The model is based on EfficientNetB7 and trained on a TFRecord dataset.
+## 📖 Overview
 
-## Features
+This project presents a web-based AI diagnostic system that classifies retinal diseases using Optical Coherence Tomography (OCT) images. It leverages deep learning (ResNet-50) and Explainable AI techniques (Grad-CAM and SHAP) to provide clinicians with transparent, interpretable visual and textual explanations of predictions.
 
-- Multi-GPU training using TensorFlow's `MirroredStrategy`.
-- Pre-trained EfficientNetB7 as the base model.
-- Checkpointing to save the best-performing model.
+---
 
-## Directory Structure
+## 🧠 Features
 
-- `training.ipynb`: Code for training the model.
-- `pre-processing.ipynb`: Dataset preprocessing utilities.
-- `app.py`: script for deploying the trained model.
-- `xai-front-end-prototype/`: Frontend code in React for user interaction.
+- Upload and classify OCT images
+- Visual heatmap explanations using Grad-CAM
+- Textual feature explanations using SHAP
+- Secure user authentication and role management
+- Store and view historical patient diagnosis records
+- React.js web interface for real-time diagnosis
+- Dockerized for easy deployment
 
-## Frontend
+---
 
-The frontend for the project is developed using React. The application provides an intuitive interface for users to interact with the model's functionality, such as uploading OCT images and viewing diagnostic results. The frontend is hosted in the `xai-front-end-prototype` folder on GitHub.
+## 🔧 Tech Stack
 
-### Screenshots of the Frontend:
+| Category         | Tools/Technologies             |
+| ---------------- | ------------------------------ |
+| Language         | Python 3.8+, JavaScript (ES6)  |
+| Backend          | Django 3.2, Flask 2.2.5        |
+| Frontend         | React.js 17.0.2                |
+| AI Framework     | TensorFlow 2.12, Keras 2.12    |
+| Explainability   | Grad-CAM (custom), SHAP 0.41.0 |
+| Database         | SQLite 3.39.0                  |
+| Containerization | Docker 24.0.2                  |
+| API Interface    | RESTful APIs                   |
 
-1. **Main Home Page**  
-   <img src="xai-front-end-prototype/screenshots/Main-Home.jpeg" width="500" height="300">
+---
 
-2. **Features Home Page**  
-   <img src="xai-front-end-prototype/screenshots/Features-Home.jpeg" width="500" height="300">
+##⚙️ System Architecture
 
-3. **Upload Image Screen**  
-   <img src="xai-front-end-prototype/screenshots/Upload-Image.jpeg" width="500" height="300">
+```plaintext
+User (Browser)
+   ↓
+React Frontend (Upload, Visuals, Auth)
+   ↓
+Django API (Routing, Logic)
+   ↓
+Flask Model Server (Inference Engine)
+   ↓
+ResNet-50 + Grad-CAM + SHAP
+   ↓
+SQLite (Results + Users + Records)
+```
 
-4. **Grad-CAM Results Display**  
-   <img src="xai-front-end-prototype/screenshots/GradCam-Results.jpeg" width="500" height="300">
+---
 
-5. **Diagnostics Results Screen**  
-   <img src="xai-front-end-prototype/screenshots/Diagnostics-Results.jpeg" width="500" height="300">
+## 🚀 Setup Instructions
 
-## Design Prototype XAI for Retinal Disease Diagnosis
+### 🔗 Clone the Repository
 
-A detailed prototype for the "Explainable AI for Retinal Disease Diagnosis" project has been designed and can be accessed on Visily. The interface showcases the user journey, including image uploads, results display, and explainable AI features.
+```bash
+git clone https://github.com/msafee72/Explainable-AI_for_Retinal_Disease_Diagnosis.git
+cd Explainable-AI_for_Retinal_Disease_Diagnosis
+```
 
-[Design Prototype XAI](https://app.visily.ai/projects/ef8f771b-a013-4d28-b5e5-a95c882af6e4/boards/1493524)
+### 🐍 Backend Setup (Django + Flask)
 
+```bash
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+python app.py
+```
 
-## Setup
+### ⚛️ Frontend Setup (React)
 
-1. Clone the repository:
+```bash
+cd oculus-frontend
+npm install
+npm start
+```
 
-    ```bash
-    git clone https://github.com/msafee72/Explainable-AI_for_Retinal_Disease_Diagnosis.git
-    cd Explainable-AI_for_Retinal_Disease_Diagnosis
-    ```
+### 🐳 Docker Setup (Optional)
 
-2. Install dependencies:
+```bash
+docker-compose up --build
+```
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+---
 
-3. Prepare your dataset in TFRecord format.
+## 🧪 Usage
 
-## Training
+1. Sign in or create an account
+2. Upload a valid OCT image (`.jpg`, `.png`)
+3. Wait for prediction (typically under 10 seconds)
+4. View:
+   - Disease type and confidence score
+   - Grad-CAM heatmap
+   - SHAP-based textual explanation
+5. Optionally download a report and save to patient record
 
-To train the model, use the script in `training.ipynb`. The dataset should be stored in the specified TFRecord format.
+---
 
-## Group Members (FYDP-OC-2024-SE-11-XAI)
+## 📦 Dataset
 
-- **Muhammad Safee** (BSEF21M057)
-- **Muhammad Muaz Saleem** (BSEF21M036)
-- **Muhammad Usman** (BSEF21M046)
-- **Muhammad Naseem** (BSEF21M058)
+The model is trained on the **Kermany OCT dataset**.
+
+> Dataset not included due to size and license. You may download it from:  
+> [https://www.kaggle.com/datasets/paultimothymooney/kermany2018](https://www.kaggle.com/datasets/paultimothymooney/kermany2018)
+
+---
+
+## 🏋️‍♂️ Model Training
+
+The retinal disease classification model (pre-trained using OCT images) is loaded and used by the backend Flask service. The model file (`retinal_model.h5`) is not included in the repository due to size and licensing.
+
+---
+
+## 🧪 Testing
+
+- Unit, Integration, Functional & Performance tests implemented
+- Sample test cases available in `/tests/`
+- Uses Django testing framework & custom scripts
+
+---
+
+## 👥 Contributors
+
+- Muhammad Safee – BSEF21M057
+- Muhammad Muaz Saleem – BSEF21M036
+- Muhammad Usman – BSEF21M046
+- Muhammad Naseem – BSEF21M058  
+  Supervisor: Dr. Nadeem Akhtar
+
+## 🔐 License
+
+This project is licensed under the MIT License.
