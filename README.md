@@ -109,7 +109,7 @@ The model is trained on the **Kermany OCT dataset**.
 
 ## 🏋️‍♂️ Model Training
 
-The retinal disease classification model (pre-trained using OCT images) is loaded and used by the backend Flask service. The model file (`retinal_model.h5`) is not included in the repository due to size and licensing.
+The retinal disease classification model (pre-trained using OCT images) is loaded and used by the backend Flask service. The model file (`retinal_model.h5`) is not included in the repository due to size.
 
 ---
 
